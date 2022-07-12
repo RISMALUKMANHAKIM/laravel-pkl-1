@@ -1,5 +1,7 @@
 <?php
 
+// menggunakan / mengimport LatihanController
+use App\Http\Controllers\LatihanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,3 +53,16 @@ Route::get('/order/{makanan}/{minuman}/{harga}', function ($makanan ,$minuman, $
 Route::get('/pesan/{pesan?}', function ($a = "-") {
     return view('pages.pesan', compact('a'));
 });
+
+// Latihan Route Optional Parameter
+Route::get('/pesanan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = "-", $minuman = "-", $cemilan = "-") {
+    return view('pages.pesanan', compact('makanan', 'minuman', 'cemilan'));
+});
+
+Route::get('/pemesanan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = "Silahkan Pesan Terlebih Dahulu", $minuman = "-", $cemilan = "-") {
+    return view('pages.pemesanan', compact('makanan', 'minuman', 'cemilan'));
+});
+
+// pemanggilan controller
+Route::get('latihan', [LatihanController::class, 'perkenalan']);
+Route::get('latihan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perkenalan2']);
