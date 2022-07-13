@@ -66,3 +66,11 @@ Route::get('/pemesanan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = "
 // pemanggilan controller
 Route::get('latihan', [LatihanController::class, 'perkenalan']);
 Route::get('latihan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perkenalan2']);
+
+Route::get('siswa/', [LatihanController::class, 'siswa']);
+
+Route::get('kampus/', [LatihanController::class, 'kampus']);
+
+Route::get('televisi/', [LatihanController::class, 'tv']);
+
+Route::get('belanja/', [LatihanController::class, 'belanja']);
