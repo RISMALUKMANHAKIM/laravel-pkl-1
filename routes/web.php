@@ -74,3 +74,5 @@ Route::get('kampus/', [LatihanController::class, 'kampus']);
 Route::get('televisi/', [LatihanController::class, 'tv']);
 
 Route::get('belanja/', [LatihanController::class, 'belanja']);
+
+Route::get('nilai/', [LatihanController::class, 'nilai']);

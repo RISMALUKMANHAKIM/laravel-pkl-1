@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,26 +13,27 @@
     </style>
     <title>Siswa</title>
 </head>
+
 <body>
-    
+
     <fieldset>
         <legend>
-            <h2>    
+            <h2>
                 Data Siswa
             </h2>
         </legend>
-        @foreach($siswa as $murid)
+        @foreach ($siswa as $murid)
             Nama : {{ $murid['name'] }} <br />
             Umur : {{ $murid['age'] }} <br />
-            Status : 
-            @if($murid['age'] > 17)
+            Status :
+            @if ($murid['age'] > 17)
                 Anda diwajibkan untuk membuat KTP
             @elseif($murid['age'] < 17)
                 Anda tidak diwajibkan untuk membuat KTP
             @endif
             <br />
-            Hobi : 
-            @foreach($murid['hobi'] as $hobi)
+            Hobi :
+            @foreach ($murid['hobi'] as $hobi)
                 <li>{{ $hobi }}</li>
             @endforeach
             <hr />
@@ -39,4 +41,5 @@
     </fieldset>
 
 </body>
+
 </html>

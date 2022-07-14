@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     </style>
     <title>Pemesanan</title>
 </head>
+
 <body>
 
     <fieldset>
@@ -27,11 +29,11 @@
                 <td>Harga</td>
                 <td>:</td>
                 <td>
-                    @if ($makanan == "Mie Goreng")
+                    @if ($makanan == 'Mie Goreng')
                         Rp5.000
-                    @elseif($makanan ==  "Seblak")
+                    @elseif($makanan == 'Seblak')
                         Rp7.500
-                    @elseif($makanan == "Nasi Padang")
+                    @elseif($makanan == 'Nasi Padang')
                         Rp15.000
                     @else
                         Rp-
@@ -47,11 +49,11 @@
                 <td>Harga</td>
                 <td>:</td>
                 <td>
-                    @if ($minuman == "Kopi")
+                    @if ($minuman == 'Kopi')
                         Rp5.000
-                    @elseif($minuman ==  "Jus")
+                    @elseif($minuman == 'Jus')
                         Rp10.000
-                    @elseif($minuman == "Teh")
+                    @elseif($minuman == 'Teh')
                         Rp7.500
                     @else
                         Rp-
@@ -65,6 +67,7 @@
             </tr>
         </table>
     </fieldset>
-    
+
 </body>
+
 </html>

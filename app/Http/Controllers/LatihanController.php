@@ -117,4 +117,54 @@ class LatihanController extends Controller
 
     }
 
+    public function nilai() {
+
+        $nilai = [
+            [
+                'name' => 'Agus', 'nilai' => [
+                    ['mapel' => 'Bahasa Indonesia', 'nilai' => 80],
+                    ['mapel' => 'Bahasa Inggris', 'nilai' => 97],
+                    ['mapel' => 'Produktif Kejuruan', 'nilai' => 67],
+                    ['mapel' => 'Matematika', 'nilai' => 100]
+                ]
+            ],
+            [
+                'name' => 'Mahmud', 'nilai' => [
+                    ['mapel' => 'Bahasa Indonesia', 'nilai' => 78],
+                    ['mapel' => 'Bahasa Inggris', 'nilai' => 86],
+                    ['mapel' => 'Produktif Kejuruan', 'nilai' => 90],
+                    ['mapel' => 'Matematika', 'nilai' => 67]
+                ]
+            ],
+            [
+                'name' => 'Rendi', 'nilai' => [
+                    ['mapel' => 'Bahasa Indonesia', 'nilai' => 90],
+                    ['mapel' => 'Bahasa Inggris', 'nilai' => 50],
+                    ['mapel' => 'Produktif Kejuruan', 'nilai' => 65],
+                    ['mapel' => 'Matematika', 'nilai' => 78]
+                ]
+            ],
+            [
+                'name' => 'Firman', 'nilai' => [
+                    ['mapel' => 'Bahasa Indonesia', 'nilai' => 78],
+                    ['mapel' => 'Bahasa Inggris', 'nilai' => 90],
+                    ['mapel' => 'Produktif Kejuruan', 'nilai' => 56],
+                    ['mapel' => 'Matematika', 'nilai' => 78]
+                ]
+            ],
+            [
+                'name' => 'Abdul', 'nilai' => [
+                    ['mapel' => 'Bahasa Indonesia', 'nilai' => 89],
+                    ['mapel' => 'Bahasa Inggris', 'nilai' => 67],
+                    ['mapel' => 'Produktif Kejuruan', 'nilai' => 80],
+                    ['mapel' => 'Matematika', 'nilai' => 90]
+                ]
+            ],
+        ];
+
+        // dd($nilai);
+        return view('pages.nilai', ['nilai' => $nilai]);
+
+    }
+
 }
