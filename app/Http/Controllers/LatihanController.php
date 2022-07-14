@@ -87,24 +87,33 @@ class LatihanController extends Controller
         $tgl = "13 Juli 2022";
 
         // dd($tv);
-        return view('pages.televisi', compact('tv', 'tgl'));
+        return view('pages.televisi', ['tv' => $tv, 'tgl' => $tgl]);
     }
 
     public function belanja() {
 
         $belanja = [
             [
-                'name' => 'Alfian',
-                'belanja' => ['sepatu' => 250000, 'baju' => 100000, 'celana' => 150000, 'kupluk' => 100000] 
+                'name' => 'Alfian', 
+                'belanja' => [
+                    ['produk' => 'Sepatu', 'harga' => 250000],
+                    ['produk' => 'Baju', 'harga' => 100000],
+                    ['produk' => 'Celana', 'harga' => 150000],
+                    ['produk' => 'Kupluk', 'harga' => 100000]
+                ]
             ],
             [
-                'name' => 'Dida',
-                'belanja' => ['topi' => 100000, 'baju' => 75000, 'celana' => 125000] 
+                'name' => 'Dida', 
+                'belanja' => [
+                    ['produk' => 'Topi', 'harga' => 100000],
+                    ['produk' => 'Baju', 'harga' => 75000],
+                    ['produk' => 'Celana', 'harga' => 125000]
+                ]
             ]
         ];
 
         // dd($belanja);
-        return view('pages.belanja', compact('belanja'));
+        return view('pages.belanja', ['belanja' => $belanja]);
 
     }
 

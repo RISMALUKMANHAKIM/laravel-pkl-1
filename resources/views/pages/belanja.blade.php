@@ -14,12 +14,38 @@
                 Daftar Belanja
             </h2>
         </legend>
+        
         @foreach($belanja as $beli)
+        @php
+            $total = 0;
+        @endphp
             Nama : {{ $beli['name'] }} <br />
             Daftar Belanja :
             @foreach($beli['belanja'] as $list)
-                <li>{{ $list }}</li>
+                <li>{{ $list['produk']. " = Rp" .$list['harga']; }}</li>
+                @php
+                    $total += $list['harga']
+                    
+                @endphp
             @endforeach
+            <br />
+            Total Belanjaan : Rp    {{ $total }} <br />
+            @if($total > 250000 && $total < 500000)
+                @php
+                    $cashback = (5/100) * $total;
+                @endphp
+                Cashback : Rp{{ $cashback }} <br />
+                Total Harga : <b>Rp{{ $total - $cashback }}</b>
+
+                @elseif($total > 500000)
+                @php
+                    $cashback = (10/100) * $total;
+                @endphp
+                
+                Cashback : Rp{{ $cashback }} <br />
+                Total Harga : <b>Rp{{ $total - $cashback }}</b>
+            @endif 
+            <hr />
         @endforeach
     </fieldset>
 
