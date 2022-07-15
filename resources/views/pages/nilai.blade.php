@@ -28,6 +28,7 @@
             $total = 0;
         @endphp
         Nama : <b>{{ $datanilai['name'] }}</b> <br />
+        Jurusan : <b>{{ $datanilai['jurusan'] }}</b> <br />
         @foreach ($datanilai['nilai'] as $nilaiMapel)
             Mata Pelajaran : {{ $nilaiMapel['mapel'] }} <br />
             Nilai : <b>{{ $nilaiMapel['nilai'] }}</b> <br />

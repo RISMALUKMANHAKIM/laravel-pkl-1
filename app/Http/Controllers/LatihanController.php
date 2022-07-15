@@ -121,7 +121,7 @@ class LatihanController extends Controller
 
         $nilai = [
             [
-                'name' => 'Agus', 'nilai' => [
+                'name' => 'Agus', 'jurusan' => 'TKR', 'nilai' => [
                     ['mapel' => 'Bahasa Indonesia', 'nilai' => 80],
                     ['mapel' => 'Bahasa Inggris', 'nilai' => 97],
                     ['mapel' => 'Produktif Kejuruan', 'nilai' => 67],
@@ -129,7 +129,7 @@ class LatihanController extends Controller
                 ]
             ],
             [
-                'name' => 'Mahmud', 'nilai' => [
+                'name' => 'Mahmud', 'jurusan' => 'TKR', 'nilai' => [
                     ['mapel' => 'Bahasa Indonesia', 'nilai' => 78],
                     ['mapel' => 'Bahasa Inggris', 'nilai' => 86],
                     ['mapel' => 'Produktif Kejuruan', 'nilai' => 90],
@@ -137,7 +137,7 @@ class LatihanController extends Controller
                 ]
             ],
             [
-                'name' => 'Rendi', 'nilai' => [
+                'name' => 'Rendi', 'jurusan' => 'TSM', 'nilai' => [
                     ['mapel' => 'Bahasa Indonesia', 'nilai' => 90],
                     ['mapel' => 'Bahasa Inggris', 'nilai' => 50],
                     ['mapel' => 'Produktif Kejuruan', 'nilai' => 65],
@@ -145,7 +145,7 @@ class LatihanController extends Controller
                 ]
             ],
             [
-                'name' => 'Firman', 'nilai' => [
+                'name' => 'Firman', 'jurusan' => 'RPL', 'nilai' => [
                     ['mapel' => 'Bahasa Indonesia', 'nilai' => 78],
                     ['mapel' => 'Bahasa Inggris', 'nilai' => 90],
                     ['mapel' => 'Produktif Kejuruan', 'nilai' => 56],
@@ -153,7 +153,7 @@ class LatihanController extends Controller
                 ]
             ],
             [
-                'name' => 'Abdul', 'nilai' => [
+                'name' => 'Abdul', 'jurusan' => 'RPL', 'nilai' => [
                     ['mapel' => 'Bahasa Indonesia', 'nilai' => 89],
                     ['mapel' => 'Bahasa Inggris', 'nilai' => 67],
                     ['mapel' => 'Produktif Kejuruan', 'nilai' => 80],
