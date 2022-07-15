@@ -2,6 +2,9 @@
 
 // menggunakan / mengimport LatihanController
 use App\Http\Controllers\LatihanController;
+// menggunakan / mengimport PostController
+use App\Http\Controllers\PostController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -76,3 +79,6 @@ Route::get('televisi/', [LatihanController::class, 'tv']);
 Route::get('belanja/', [LatihanController::class, 'belanja']);
 
 Route::get('nilai/', [LatihanController::class, 'nilai']);
+
+// Route Post
+Route::get('list-post/', [PostController::class, 'tampil']);
