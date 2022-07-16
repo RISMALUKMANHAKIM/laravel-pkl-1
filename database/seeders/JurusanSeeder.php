@@ -15,7 +15,7 @@ class JurusanSeeder extends Seeder
     {
         $sample = [
             [
-                'jurusan' => 'Rekayasa Perangkat Lunak', 'Teknik Bisnis Sepeda Motor', 'Teknik Kendaran Ringan',
+                'jurusan' => 'Rekayasa Perangkat Lunak',
                 'kelas' => 'X, XI, XII'
             ],
             [
