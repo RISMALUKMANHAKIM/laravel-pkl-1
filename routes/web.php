@@ -1,10 +1,13 @@
 <?php
 
 // menggunakan / mengimport LatihanController
+
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\LatihanController;
 // menggunakan / mengimport PostController
 use App\Http\Controllers\PostController;
-
+use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\JurusanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -88,3 +91,15 @@ Route::get('post/judul/{title}', [PostController::class, 'search_title']);
 Route::get('post/edit/{id}/{title}/{content}', [PostController::class, 'edit']);
 Route::get('post/tambah/{title}/{content}', [PostController::class, 'tambah']);
 Route::get('post/delete/{id}', [PostController::class, 'hapus']);
+
+// Route Siswa
+Route::get('sekolah/siswa/', [SiswaController::class, 'index']);
+// Route::get('siswa/edit/{id}/{nama}/{kelas}/{jenis_kelamin}/{umur}/{jurusan}', [SiswaController::class, 'edit']);
+// Route::get('siswa/tambah/{nama}/{kelas}/{jenis_kelamin}/{umur}/{jurusan}', [SiswaController::class, 'tambah']);
+// Route::get('siswa/delete/{id}', [SiswaController::class, 'hapus']);
+
+// Route Guru
+Route::get('sekolah/guru/', [GuruController::class, 'index']);
+
+// Route Jurusan
+Route::get('sekolah/jurusan/', [JurusanController::class, 'index']);
