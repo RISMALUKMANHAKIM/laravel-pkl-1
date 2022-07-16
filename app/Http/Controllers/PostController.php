@@ -31,6 +31,7 @@ class PostController extends Controller
         // Mencari data dari model Post berdasarkan id
         // Query -> select * from posts where title like %title%
         $post = Post::where('title', 'like', '%' . $title . '%')->get();
+        
         return $post;
 
     }
