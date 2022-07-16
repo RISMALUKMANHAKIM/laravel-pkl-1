@@ -68,6 +68,7 @@ Route::get('/pemesanan/{makanan?}/{minuman?}/{cemilan?}', function ($makanan = "
 
 // pemanggilan controller
 Route::get('latihan', [LatihanController::class, 'perkenalan']);
+
 Route::get('latihan/{nama?}/{alamat?}/{umur?}', [LatihanController::class, 'perkenalan2']);
 
 Route::get('siswa/', [LatihanController::class, 'siswa']);
@@ -81,4 +82,9 @@ Route::get('belanja/', [LatihanController::class, 'belanja']);
 Route::get('nilai/', [LatihanController::class, 'nilai']);
 
 // Route Post
-Route::get('list-post/', [PostController::class, 'tampil']);
+Route::get('post/', [PostController::class, 'tampil']);
+Route::get('post/{id}', [PostController::class, 'search']);
+Route::get('post/judul/{title}', [PostController::class, 'search_title']);
+Route::get('post/edit/{id}/{title}/{content}', [PostController::class, 'edit']);
+Route::get('post/tambah/{title}/{content}', [PostController::class, 'tambah']);
+Route::get('post/delete/{id}', [PostController::class, 'hapus']);
