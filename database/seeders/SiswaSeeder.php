@@ -32,5 +32,6 @@ class SiswaSeeder extends Seeder
         ];
 
         DB::table('siswas')->insert($sample);
+        
     }
 }
