@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use DB;
 use Illuminate\Database\Seeder;
 
 class JurusanSeeder extends Seeder
@@ -13,21 +14,24 @@ class JurusanSeeder extends Seeder
      */
     public function run()
     {
-        $sample = [
+        $jurusan = [
             [
-                'jurusan' => 'Rekayasa Perangkat Lunak',
-                'kelas' => 'X, XI, XII'
+                'jurusan' => 'Rekayasa Perangkat Lunak'
             ],
             [
-                'jurusan' =>'Teknik Bisnis Sepeda Motor',
-                'kelas' => 'X, XI, XII'
+                'jurusan' =>'Teknik Bisnis Sepeda Motor'
             ],
             [
-                'jurusan' =>'Teknik Kendaran Ringan',
-                'kelas' => 'X, XI, XII'
+                'jurusan' =>'Teknik Kendaran Ringan'
+            ],
+            [
+                'jurusan' =>'Kesenian'
+            ],
+            [
+                'jurusan' =>'Pemasaran'
             ]
         ];
+        DB::table('jurusans')->insert($jurusan);
 
-        DB::table('jurusans')->insert($sample);
     }
 }

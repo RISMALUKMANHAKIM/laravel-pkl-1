@@ -14,7 +14,7 @@ class GuruSeeder extends Seeder
      */
     public function run()
     {
-        $sample = [
+        $guru = [
             [
                 'nama' => 'Alfian',
                 'mapel' => 'Bahasa Arab',
@@ -24,13 +24,34 @@ class GuruSeeder extends Seeder
             ],
             [
                 'nama' => 'Dida',
-                'mapel' => 'Bahasa Alien',
+                'mapel' => 'Bahasa Inggris',
                 'jenis_kelamin' => 'Laki-laki',
                 'umur' => '25',
                 'status' => 'Honorer'
+            ],
+            [
+                'nama' => 'Didi',
+                'mapel' => 'Produktif RPL',
+                'jenis_kelamin' => 'Laki-laki',
+                'umur' => '30',
+                'status' => 'Tetap'
+            ],
+            [
+                'nama' => 'Dede',
+                'mapel' => 'Produktif TKR',
+                'jenis_kelamin' => 'Laki-laki',
+                'umur' => '28',
+                'status' => 'Tetap'
+            ],
+            [
+                'nama' => 'Dudu',
+                'mapel' => 'Produktif TBSM',
+                'jenis_kelamin' => 'Laki-laki',
+                'umur' => '21',
+                'status' => 'Tetap'
             ]
         ];
-
-        DB::table('gurus')->insert($sample);
+        DB::table('gurus')->insert($guru);
+        
     }
 }

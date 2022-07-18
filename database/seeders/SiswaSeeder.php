@@ -14,7 +14,7 @@ class SiswaSeeder extends Seeder
      */
     public function run()
     {
-        $sample = [
+        $siswa = [
             [
                 'nama' => 'Alif',
                 'kelas' => 'XI',
@@ -23,15 +23,35 @@ class SiswaSeeder extends Seeder
                 'jurusan' => 'RPL'
             ],
             [
-                'nama' => 'Baba',
+                'nama' => 'Hihi',
+                'kelas' => 'XII',
+                'jenis_kelamin' => 'Perempuan',
+                'umur' => '17',
+                'jurusan' => 'RPL'
+            ],
+            [
+                'nama' => 'Adi',
+                'kelas' => 'X',
+                'jenis_kelamin' => 'Laki-laki',
+                'umur' => '15',
+                'jurusan' => 'TKR'
+            ],
+            [
+                'nama' => 'Dudu',
                 'kelas' => 'XII',
                 'jenis_kelamin' => 'Laki-laki',
                 'umur' => '17',
-                'jurusan' => 'RPL'
+                'jurusan' => 'TKR'
+            ],
+            [
+                'nama' => 'Dada',
+                'kelas' => 'X',
+                'jenis_kelamin' => 'Laki-laki',
+                'umur' => '15',
+                'jurusan' => 'TBSM'
             ]
         ];
-
-        DB::table('siswas')->insert($sample);
+        DB::table('siswas')->insert($siswa);
         
     }
 }
